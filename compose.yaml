@@ -5,18 +5,14 @@ services:
     stdin_open: true
     working_dir: /app
     volumes:
-      - ./team-b:/app
+      - ./src:/app
       - vendor-vol:/app/vendor
-      # - cache-vol:/app/bootstrap/cache
-      # - storage-vol:/app/storage/framework
     ports:
-      - "8000:8000"
+      - 8000:8000
     command: >
       bash -c "composer i &&
-      php artisan migrate &&
+      php artisan migrate --force --seed &&
       php artisan serve --host=0.0.0.0 --port=8000"
 
 volumes:
   vendor-vol:
-  cache-vol:
-  storage-vol:
