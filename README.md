@@ -20,6 +20,16 @@
 docker compose -f 'compose.yaml' up -d --build
 ```
 
+初回起動時のみ、サーバー起動後にコンソールへ入り(入り方は管理の章で記載)下記2つのコマンドを実行してください。
+
+```
+cp .env.example .env
+```
+
+```
+php artisan key:generate
+```
+
 サービスを開くには[http://localhost:8000/](http://localhost:8000/)にアクセスします
 
 ## 管理
