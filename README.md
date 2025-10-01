@@ -14,6 +14,8 @@
 
 ![screenshot-2](./screenshot-2.png)
 
+このリポジトリを`git clone --recursive`でクローンし、作成されたディレクトリに移動します
+
 下記コマンドでサーバーが開始します
 
 ```
@@ -37,13 +39,7 @@ php artisan key:generate
 コンソールに入るには
 
 ```
-docker compose run --build --rm app bash
-```
-
-サーバーログを確認するには
-
-```
 docker exec -it ???-app-1 bash
 ```
 
-'???'にはディレクトリ名を入れてください
+'???'にはディレクトリ名を入れてください(hackathon-ceresなど)
